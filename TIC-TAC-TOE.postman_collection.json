@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "0c1639b1-5c4f-4c3c-b7dd-e1ba84ebd85a",
+		"name": "TIC-TAC-TOE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test2\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tic_tac_toe}}/user/register",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test2\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tic_tac_toe}}/user/login",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "game",
+			"item": [
+				{
+					"name": "startGame",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkODI4MjVjLTRjYWEtNGQ5OC1hMjZiLWM0MzU1MTM3NmVlNSIsInVzZXJuYW1lIjoidGVzdDIiLCJwYXNzd29yZCI6IiQyYiQxMCQzV2l6Sy9PMVlLcXRCTEI3MUd4ZVV1ZzBXY2g5cXV4bGdSbENOTm9jdVNsdGI4TVFzYnIxZSIsImNyZWF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsImlhdCI6MTYyMDE1Mzk4NiwiZXhwIjoxNjIwMTk3MTg2fQ.yJnGRVci8QR42ak3-sT9ACjfaCx1dzRq0yh3YifV7TY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"player1\":\"test1\",\r\n    \"player2\":\"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tic_tac_toe}}/game/start",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"game",
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllGames",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkODI4MjVjLTRjYWEtNGQ5OC1hMjZiLWM0MzU1MTM3NmVlNSIsInVzZXJuYW1lIjoidGVzdDIiLCJwYXNzd29yZCI6IiQyYiQxMCQzV2l6Sy9PMVlLcXRCTEI3MUd4ZVV1ZzBXY2g5cXV4bGdSbENOTm9jdVNsdGI4TVFzYnIxZSIsImNyZWF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsImlhdCI6MTYyMDE1Mzk4NiwiZXhwIjoxNjIwMTk3MTg2fQ.yJnGRVci8QR42ak3-sT9ACjfaCx1dzRq0yh3YifV7TY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{tic_tac_toe}}/game/",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"game",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "playerMove",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkODI4MjVjLTRjYWEtNGQ5OC1hMjZiLWM0MzU1MTM3NmVlNSIsInVzZXJuYW1lIjoidGVzdDIiLCJwYXNzd29yZCI6IiQyYiQxMCQzV2l6Sy9PMVlLcXRCTEI3MUd4ZVV1ZzBXY2g5cXV4bGdSbENOTm9jdVNsdGI4TVFzYnIxZSIsImNyZWF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsImlhdCI6MTYyMDE1Mzk4NiwiZXhwIjoxNjIwMTk3MTg2fQ.yJnGRVci8QR42ak3-sT9ACjfaCx1dzRq0yh3YifV7TY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"position\":0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tic_tac_toe}}/game/move/81c3501a-b8d4-482d-aab9-2040f88f20e4",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"game",
+								"move",
+								"81c3501a-b8d4-482d-aab9-2040f88f20e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getGameStatus",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkODI4MjVjLTRjYWEtNGQ5OC1hMjZiLWM0MzU1MTM3NmVlNSIsInVzZXJuYW1lIjoidGVzdDIiLCJwYXNzd29yZCI6IiQyYiQxMCQzV2l6Sy9PMVlLcXRCTEI3MUd4ZVV1ZzBXY2g5cXV4bGdSbENOTm9jdVNsdGI4TVFzYnIxZSIsImNyZWF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDUtMDRUMTg6MjA6MzEuMzQ5WiIsImlhdCI6MTYyMDE1Mzk4NiwiZXhwIjoxNjIwMTk3MTg2fQ.yJnGRVci8QR42ak3-sT9ACjfaCx1dzRq0yh3YifV7TY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{tic_tac_toe}}/game/1df9ee89-7d4a-4e72-9308-e0f4147a94d7",
+							"host": [
+								"{{tic_tac_toe}}"
+							],
+							"path": [
+								"game",
+								"1df9ee89-7d4a-4e72-9308-e0f4147a94d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "healthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{tic_tac_toe}}/healthCheck",
+					"host": [
+						"{{tic_tac_toe}}"
+					],
+					"path": [
+						"healthCheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
